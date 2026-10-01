@@ -1,6 +1,5 @@
-"use client";
-
 import { useEffect, useRef } from "react";
+import { useLanguage } from "../../context/LanguageContext";
 
 // ── Card photos — swap these for your own (one per card) ──────────────────
 const CARDS = [
@@ -32,6 +31,7 @@ const CARD_H = 286;
 const SPAN = 1080; // design width the deck is authored at
 
 export function MagneticDeck() {
+  const { t } = useLanguage();
   const fieldRef = useRef<HTMLDivElement>(null);
   const hubRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -217,8 +217,8 @@ export function MagneticDeck() {
       <style>{css}</style>
 
       <div className="text-center mb-10 relative z-10 pointer-events-none">
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-black mb-4">Crafted with this Stack</h2>
-        <p className="text-gray-500 font-medium px-4">Interact with the cards or watch them scatter.</p>
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-black mb-4">{t("magneticTitle")}</h2>
+        <p className="text-gray-500 font-medium px-4">{t("magneticDesc")}</p>
       </div>
 
       <div className="md-hub" ref={hubRef}>

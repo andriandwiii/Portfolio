@@ -1,5 +1,3 @@
-"use client";
-
 import { socialLinks } from "../data/portfolio";
 import { useLanguage } from "../context/LanguageContext";
 

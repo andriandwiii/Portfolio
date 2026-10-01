@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { caseStudies } from "../data/portfolio";
+import { useLanguage } from "../context/LanguageContext";
 
 interface CaseStudyProps {
   projectId: string | null;
@@ -65,6 +66,7 @@ const sectionLabels = [
 ];
 
 export default function CaseStudy({ projectId, onClose }: CaseStudyProps) {
+  const { t } = useLanguage();
   const data = projectId ? caseStudies[projectId] : null;
 
   // Escape key
@@ -125,7 +127,7 @@ export default function CaseStudy({ projectId, onClose }: CaseStudyProps) {
             >
               <div className="max-w-[860px] mx-auto flex items-center justify-between px-6 md:px-12 py-5">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-black/40">
-                  Case Study Documentation
+                  {t("caseStudyLabel")}
                 </p>
                 <button
                   onClick={onClose}
@@ -206,7 +208,7 @@ export default function CaseStudy({ projectId, onClose }: CaseStudyProps) {
                   onClick={onClose}
                   className="px-8 py-4 rounded-full text-[15px] font-semibold bg-black text-white hover:bg-black/80 transition-colors shadow-lg shadow-black/10 hover:shadow-black/20"
                 >
-                  ← Back to Main Portfolio
+                  {t("caseStudyBack")}
                 </button>
               </div>
             </div>

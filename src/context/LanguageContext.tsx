@@ -1,5 +1,3 @@
-"use client";
-
 import { createContext, useState, useContext, ReactNode } from "react";
 
 type Language = "id" | "en";
@@ -46,7 +44,24 @@ const translations = {
     certOverview: "Ringkasan Sertifikasi",
     certFocus: "Fokus Area",
     certSkills: "Keterampilan & Kompetensi",
-    certShow: "Lihat Kredensial"
+    certShow: "Lihat Kredensial",
+    // Stats
+    statProjects: "Proyek Selesai",
+    statInternships: "Magang Industri",
+    statExperience: "Tahun Pengalaman",
+    statCoffee: "Cangkir Kopi",
+    // MagneticDeck
+    magneticTitle: "Dibangun dengan Stack Ini",
+    magneticDesc: "Interaksi dengan kartu atau lihat mereka bergerak.",
+    // HoverImageLinks
+    hoverAbout: "Lebih jauh tentang perjalanan dan keahlian saya.",
+    hoverExperience: "Rekam jejak profesional dan pendidikan.",
+    hoverProjects: "Kumpulan karya dan eksplorasi teknis.",
+    hoverCertificates: "Sertifikasi dan penghargaan profesional.",
+    hoverContact: "Mari berkolaborasi membangun hal hebat.",
+    // CaseStudy
+    caseStudyLabel: "Dokumentasi Studi Kasus",
+    caseStudyBack: "← Kembali ke Portfolio",
   },
   en: {
     navAbout: "About",
@@ -83,7 +98,24 @@ const translations = {
     certOverview: "Certification Overview",
     certFocus: "Focus Area",
     certSkills: "Skills & Competencies",
-    certShow: "Show Credentials"
+    certShow: "Show Credentials",
+    // Stats
+    statProjects: "Projects Completed",
+    statInternships: "Industry Internships",
+    statExperience: "Years Experience",
+    statCoffee: "Cups of Coffee",
+    // MagneticDeck
+    magneticTitle: "Crafted with this Stack",
+    magneticDesc: "Interact with the cards or watch them scatter.",
+    // HoverImageLinks
+    hoverAbout: "Learn more about my journey and expertise.",
+    hoverExperience: "Professional and educational track record.",
+    hoverProjects: "Collection of works and technical explorations.",
+    hoverCertificates: "Professional certifications and awards.",
+    hoverContact: "Let's collaborate to build something great.",
+    // CaseStudy
+    caseStudyLabel: "Case Study Documentation",
+    caseStudyBack: "← Back to Main Portfolio",
   }
 };
 

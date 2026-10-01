@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { PortfolioStack } from "./ui/PortfolioStack";
@@ -261,7 +259,7 @@ export default function InternshipExperience() {
 
                           <div className="md:col-span-3">
                             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-black/40 mb-2">
-                              Period
+                              {t("period")}
                             </p>
                             <p className="text-black/80 font-medium">{exp.period}</p>
                           </div>
@@ -277,7 +275,7 @@ export default function InternshipExperience() {
 
                           <div className="md:col-span-3">
                             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-black/40 mb-3">
-                              Focus Area
+                              {t("focusArea")}
                             </p>
                             <div className="flex flex-wrap gap-2">
                               {exp.tags.map((tag, i) => (

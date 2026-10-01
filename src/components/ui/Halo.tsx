@@ -1,5 +1,3 @@
-"use client";
-
 export type HaloVariant = "top" | "bottom" | "left" | "right";
 
 export interface HaloHorizonProps {

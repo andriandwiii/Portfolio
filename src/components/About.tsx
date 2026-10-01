@@ -5,23 +5,23 @@ import { techStack } from "../data/portfolio";
 import { ScrollBasedVelocity } from "./ui/ScrollBasedVelocity";
 import { useLanguage } from "../context/LanguageContext";
 
-const stats = [
-  { value: "5+", label: "Projects Completed" },
-  { value: "2", label: "Industry Internships" },
-  { value: "1+", label: "Years Experience" },
-  { value: "∞", label: "Cups of Coffee" },
+const statsKeys = [
+  { value: "5+", labelKey: "statProjects" },
+  { value: "2", labelKey: "statInternships" },
+  { value: "1+", labelKey: "statExperience" },
+  { value: "∞", labelKey: "statCoffee" },
 ];
 
 const categoryAccent: Record<string, string> = {
-  "Programming & Frameworks": "bg-cyan-50 border-brand/20 text-brand",
-  "Database & Tools": "bg-fuchsia-50 border-fuchsia-100 text-fuchsia-700",
-  "Soft Skills & Others": "bg-violet-50 border-violet-100 text-violet-700",
+  "Hard Skills": "bg-cyan-50 border-brand/20 text-brand",
+  "Tools & Core": "bg-fuchsia-50 border-fuchsia-100 text-fuchsia-700",
+  "Soft Skills": "bg-violet-50 border-violet-100 text-violet-700",
 };
 
 const categoryDot: Record<string, string> = {
-  "Programming & Frameworks": "bg-brand",
-  "Database & Tools": "bg-fuchsia-500",
-  "Soft Skills & Others": "bg-violet-500",
+  "Hard Skills": "bg-brand",
+  "Tools & Core": "bg-fuchsia-500",
+  "Soft Skills": "bg-violet-500",
 };
 
 // Typed cubic-bezier ease
@@ -155,9 +155,9 @@ export default function About() {
           {...fade(0.21)}
           className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-20"
         >
-          {stats.map((s) => (
+          {statsKeys.map((s) => (
             <div
-              key={s.label}
+              key={s.labelKey}
               className="border border-black/7 rounded-2xl p-6 hover:border-black/15 transition-colors"
             >
               <p
@@ -166,7 +166,7 @@ export default function About() {
               >
                 {s.value}
               </p>
-              <p className="text-sm text-black/45">{s.label}</p>
+              <p className="text-sm text-black/45">{t(s.labelKey)}</p>
             </div>
           ))}
         </motion.div>

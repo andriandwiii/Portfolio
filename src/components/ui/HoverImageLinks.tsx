@@ -1,37 +1,40 @@
 import React, { useRef } from "react";
 import { useMotionValue, motion, useSpring, useTransform } from "framer-motion";
+import { useLanguage } from "../../context/LanguageContext";
 
 export const HoverImageLinks = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-[#151515] p-6 md:px-12 lg:px-24 py-20 md:py-32 border-t border-white/5">
       <div className="mx-auto max-w-6xl">
         <Link
           heading="About"
-          subheading="Lebih jauh tentang perjalanan dan keahlian saya."
+          subheading={t("hoverAbout")}
           imgSrc="/img/profile.jpeg"
           href="#about"
         />
         <Link
           heading="Experience"
-          subheading="Rekam jejak profesional dan pendidikan."
+          subheading={t("hoverExperience")}
           imgSrc="/img/documentation.jpeg"
           href="#experience"
         />
         <Link
           heading="Projects"
-          subheading="Kumpulan karya dan eksplorasi teknis."
+          subheading={t("hoverProjects")}
           imgSrc="/img/Project.png"
           href="#projects"
         />
         <Link
           heading="Certificates"
-          subheading="Sertifikasi dan penghargaan profesional."
+          subheading={t("hoverCertificates")}
           imgSrc="/img/sertif.jpg"
           href="#certificates"
         />
         <Link
           heading="Contact"
-          subheading="Mari berkolaborasi membangun hal hebat."
+          subheading={t("hoverContact")}
           imgSrc="/img/contact.jpg"
           href="#contact"
         />

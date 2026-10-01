@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
@@ -21,6 +19,7 @@ const certificatesData = {
         <>Memenuhi standar kompetensi nasional dalam perancangan dan pembuatan perangkat lunak.</>,
         <>Menerapkan praktik terbaik dalam penulisan kode yang aman dan efisien.</>
       ],
+      credentialUrl: "https://bnsp.go.id/",
       images: [
         { title: "Sertifikat BNSP", image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop", alt: "Sertifikat BNSP" }
       ]
@@ -41,6 +40,7 @@ const certificatesData = {
         <>Merancang dan mengelola indeks pada basis data skala besar.</>,
         <>Memecahkan masalah pada pengelolaan data yang kompleks.</>
       ],
+      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -60,6 +60,7 @@ const certificatesData = {
         <>Merancang struktur dan relasi arsitektur basis data relasional.</>,
         <>Mengimplementasikan dan menguji sistem basis data dari tahap awal hingga akhir.</>
       ],
+      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -79,6 +80,7 @@ const certificatesData = {
         <>Menguasai arsitektur pengembangan frontend modern.</>,
         <>Mengintegrasikan dan mengelola sistem backend secara efisien.</>
       ],
+      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -98,6 +100,7 @@ const certificatesData = {
         <>Membangun aplikasi mobile lintas platform (iOS dan Android).</>,
         <>Mengimplementasikan navigasi kompleks dan pengelolaan state yang reaktif.</>
       ],
+      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -119,6 +122,7 @@ const certificatesData = {
         <>Met national competency standards in software design and development.</>,
         <>Implemented best practices in writing secure and efficient code.</>
       ],
+      credentialUrl: "https://bnsp.go.id/",
       images: [
         { title: "BNSP Certificate", image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop", alt: "BNSP Certificate" }
       ]
@@ -139,6 +143,7 @@ const certificatesData = {
         <>Designed and managed indexes on large-scale databases.</>,
         <>Troubleshot complex data management issues.</>
       ],
+      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -158,6 +163,7 @@ const certificatesData = {
         <>Designed the structure and relations of a relational database architecture.</>,
         <>Implemented and tested the database system from start to finish.</>
       ],
+      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -177,6 +183,7 @@ const certificatesData = {
         <>Mastered modern frontend development architectures.</>,
         <>Integrated and managed backend systems efficiently.</>
       ],
+      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -196,6 +203,7 @@ const certificatesData = {
         <>Built cross-platform mobile applications (iOS and Android).</>,
         <>Implemented complex navigation and reactive state management.</>
       ],
+      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -326,7 +334,9 @@ export default function Certificates() {
                           </ul>
 
                           <a
-                            href="https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506"
+                            href={cert.credentialUrl}
+                            target="_blank"
+                            rel="noreferrer"
                             className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-black text-white text-[15px] font-medium hover:bg-black/80 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
                           >
                             {t("certShow")}
