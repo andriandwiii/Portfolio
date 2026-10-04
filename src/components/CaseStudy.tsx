@@ -58,16 +58,26 @@ function renderContent(text: string) {
   });
 }
 
-const sectionLabels = [
-  { key: "problem", label: "01 · Problem Statement" },
-  { key: "solution", label: "02 · Design Solution" },
-  { key: "challenges", label: "03 · Technical Challenges" },
-  { key: "testing", label: "04 · Testing Phase" },
-];
+const sectionLabelsMap = {
+  id: [
+    { key: "problem", label: "01 · Rumusan Masalah" },
+    { key: "solution", label: "02 · Solusi & Arsitektur" },
+    { key: "challenges", label: "03 · Tantangan Teknis" },
+    { key: "testing", label: "04 · Fase Pengujian" },
+  ],
+  en: [
+    { key: "problem", label: "01 · Problem Statement" },
+    { key: "solution", label: "02 · Design Solution" },
+    { key: "challenges", label: "03 · Technical Challenges" },
+    { key: "testing", label: "04 · Testing Phase" },
+  ],
+};
 
 export default function CaseStudy({ projectId, onClose }: CaseStudyProps) {
-  const { t } = useLanguage();
-  const data = projectId ? caseStudies[projectId] : null;
+  const { t, language } = useLanguage();
+  const langStudies = caseStudies[language as keyof typeof caseStudies] || caseStudies.id;
+  const data = projectId ? langStudies[projectId] : null;
+  const sectionLabels = sectionLabelsMap[language as keyof typeof sectionLabelsMap] || sectionLabelsMap.id;
 
   // Escape key
   useEffect(() => {
@@ -180,7 +190,7 @@ export default function CaseStudy({ projectId, onClose }: CaseStudyProps) {
               {data.documentation && data.documentation.length > 0 && (
                 <div className="mt-20">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-violet-600 mb-8">
-                    05 · Project Documentation
+                    {language === "id" ? "05 · Dokumentasi Proyek" : "05 · Project Documentation"}
                   </p>
                   <div className="flex flex-col gap-12">
                     {data.documentation.map((doc, idx) => (
