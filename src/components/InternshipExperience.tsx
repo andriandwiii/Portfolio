@@ -22,8 +22,8 @@ const educationData = {
       <><strong>Fokus Studi:</strong> Menjadi Fullstack Developer yang mampu menangani masalah skalabilitas aplikasi web.</>
     ],
     images: [
-      { title: "Software Engineering", image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop", alt: "Coding on laptop" },
-      { title: "Sebelas Maret University", image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Gerbang_Depan_UNS_Universitas_Sebelas_Maret_Surakarta_03.jpg", alt: "University Campus" },
+      { title: "Software Engineering", image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop", alt: "Programming and coding", objectFit: "cover" as const },
+      { title: "Sebelas Maret University", image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Gerbang_Depan_UNS_Universitas_Sebelas_Maret_Surakarta_03.jpg", alt: "University Campus", objectFit: "cover" as const },
     ]
   },
   {
@@ -42,7 +42,7 @@ const educationData = {
       <>Mempelajari dasar-dasar pengolahan citra dan desain grafis.</>
     ],
     images: [
-      { title: "Design", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop", alt: "Design" }
+      { title: "Multimedia & Design", image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=85&w=1200&auto=format&fit=crop", alt: "Multimedia Design", objectFit: "cover" as const }
       ]
     }
   ],
@@ -64,8 +64,8 @@ const educationData = {
         <><strong>Study Focus:</strong> Becoming a Fullstack Developer capable of handling web application scalability issues.</>
       ],
       images: [
-        { title: "Software Engineering", image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop", alt: "Coding on laptop" },
-        { title: "Sebelas Maret University", image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Gerbang_Depan_UNS_Universitas_Sebelas_Maret_Surakarta_03.jpg", alt: "University Campus" },
+        { title: "Software Engineering", image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop", alt: "Programming and coding", objectFit: "cover" as const },
+        { title: "Sebelas Maret University", image: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Gerbang_Depan_UNS_Universitas_Sebelas_Maret_Surakarta_03.jpg", alt: "University Campus", objectFit: "cover" as const },
       ]
     },
     {
@@ -84,7 +84,7 @@ const educationData = {
         <>Learned the fundamentals of image processing and graphic design.</>
       ],
       images: [
-        { title: "Design", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop", alt: "Design" }
+        { title: "Multimedia & Design", image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=85&w=1200&auto=format&fit=crop", alt: "Multimedia Design", objectFit: "cover" as const }
       ]
     }
   ]
@@ -109,8 +109,8 @@ const experiencesData = {
       <>Mengelola kontrol versi kode menggunakan Git dan GitHub secara kolaboratif.</>
     ],
     images: [
-      { title: "Dashboard UI", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", alt: "Code on screen", objectFit: "cover" as const },
-      { title: "Testing", image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=1200&auto=format&fit=crop", alt: "Workspace setup" },
+      { title: "Team Discussion", image: "/img/Dokumentasi.jpeg", alt: "Team Discussion", objectFit: "cover" as const },
+      { title: "Workspace", image: "/img/dokumentasi2.png", alt: "Workspace setup", objectFit: "cover" as const },
     ]
   },
   {
@@ -130,7 +130,8 @@ const experiencesData = {
       <>Berkolaborasi bersama tim pengembang dalam siklus hidup perangkat lunak secara agile.</>
     ],
     images: [
-      { title: "System Dashboard", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop", alt: "Database architecture", objectFit: "cover" as const },
+      { title: "SIAKAD Mockup", image: "/img/mockup siakad.png", alt: "SIAKAD Mockup", objectFit: "cover" as const },
+      { title: "SIAKAD Interface", image: "/img/siakad.png", alt: "SIAKAD Interface", objectFit: "cover" as const },
     ]
   }],
   en: [
@@ -151,8 +152,8 @@ const experiencesData = {
         <>Managed source code version control using Git and GitHub collaboratively.</>
       ],
       images: [
-        { title: "Dashboard UI", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", alt: "Code on screen", objectFit: "cover" as const },
-        { title: "Testing", image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=1200&auto=format&fit=crop", alt: "Workspace setup" },
+        { title: "Team Discussion", image: "/img/Dokumentasi.jpeg", alt: "Team Discussion", objectFit: "cover" as const },
+        { title: "Workspace", image: "/img/dokumentasi2.png", alt: "Workspace setup", objectFit: "cover" as const },
       ]
     },
     {
@@ -172,7 +173,8 @@ const experiencesData = {
         <>Collaborated with the development team in an agile software lifecycle.</>
       ],
       images: [
-        { title: "System Dashboard", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop", alt: "Database architecture", objectFit: "cover" as const },
+        { title: "SIAKAD Mockup", image: "/img/mockup siakad.png", alt: "SIAKAD Mockup", objectFit: "cover" as const },
+        { title: "SIAKAD Interface", image: "/img/siakad.png", alt: "SIAKAD Interface", objectFit: "cover" as const },
       ]
     }
   ]
@@ -185,7 +187,7 @@ export default function InternshipExperience() {
   const experiences = experiencesData[language as keyof typeof experiencesData];
   const education = educationData[language as keyof typeof educationData];
 
-  const [expandedEdu, setExpandedEdu] = useState<number | null>(0);
+  const [expandedEdu, setExpandedEdu] = useState<number | null>(null);
   const [expandedExp, setExpandedExp] = useState<number | null>(null);
 
   return (

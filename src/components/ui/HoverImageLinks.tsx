@@ -17,19 +17,19 @@ export const HoverImageLinks = () => {
         <Link
           heading="Experience"
           subheading={t("hoverExperience")}
-          imgSrc="/img/documentation.jpeg"
+          imgSrc={["/img/Dokumentasi.jpeg", "/img/dokumentasi2.png"]}
           href="#experience"
         />
         <Link
           heading="Projects"
           subheading={t("hoverProjects")}
-          imgSrc="/img/Project.png"
+          imgSrc={["/img/growsafe mockup.png", "/img/rintisku1.png"]}
           href="#projects"
         />
         <Link
           heading="Certificates"
           subheading={t("hoverCertificates")}
-          imgSrc="/img/sertif.jpg"
+          imgSrc="/img/sertif.png"
           href="#certificates"
         />
         <Link
@@ -46,7 +46,7 @@ export const HoverImageLinks = () => {
 interface LinkProps {
   heading: string;
   subheading: string;
-  imgSrc: string;
+  imgSrc: string | string[];
   href: string;
 }
 
@@ -121,22 +121,55 @@ const Link = ({ heading, imgSrc, subheading, href }: LinkProps) => {
         </span>
       </div>
 
-      <motion.img
-        style={{
-          top,
-          left,
-          translateX: "-50%",
-          translateY: "-50%",
-        }}
-        variants={{
-          initial: { scale: 0, rotate: "-12.5deg" },
-          whileHover: { scale: 1, rotate: "12.5deg" },
-        }}
-        transition={{ type: "spring" }}
-        src={imgSrc}
-        className="absolute z-0 h-32 w-40 rounded-2xl object-cover md:h-56 md:w-72 shadow-2xl"
-        alt={`Image representing a link for ${heading}`}
-      />
+      {Array.isArray(imgSrc) ? (
+        imgSrc.map((src, index) => {
+          const isLast = index === imgSrc.length - 1;
+          const rotationAngle = isLast ? "12.5deg" : "-5deg";
+          const initialRotation = isLast ? "-12.5deg" : "-20deg";
+          const xOffset = isLast ? "0%" : "-15%";
+          const yOffset = isLast ? "0%" : "10%";
+          
+          return (
+            <motion.img
+              key={index}
+              style={{
+                top,
+                left,
+                translateX: "-50%",
+                translateY: "-50%",
+                zIndex: index,
+              }}
+              variants={{
+                initial: { scale: 0, rotate: initialRotation, x: 0, y: 0 },
+                whileHover: { scale: 1, rotate: rotationAngle, x: xOffset, y: yOffset },
+              }}
+              transition={{ type: "spring", delay: isLast ? 0.04 : 0 }}
+              src={src}
+              className={`absolute h-32 w-40 rounded-2xl object-cover md:h-56 md:w-72 shadow-2xl ${
+                !isLast ? 'border-4 border-[#151515] opacity-80' : 'border-4 border-[#151515]'
+              }`}
+              alt={`Image ${index + 1} representing a link for ${heading}`}
+            />
+          );
+        })
+      ) : (
+        <motion.img
+          style={{
+            top,
+            left,
+            translateX: "-50%",
+            translateY: "-50%",
+          }}
+          variants={{
+            initial: { scale: 0, rotate: "-12.5deg" },
+            whileHover: { scale: 1, rotate: "12.5deg" },
+          }}
+          transition={{ type: "spring" }}
+          src={imgSrc}
+          className="absolute z-0 h-32 w-40 rounded-2xl object-cover md:h-56 md:w-72 shadow-2xl"
+          alt={`Image representing a link for ${heading}`}
+        />
+      )}
 
       <motion.div
         variants={{

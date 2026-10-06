@@ -64,7 +64,8 @@ export const projectsData = {
       tagline: "ERP UMKM & Digitalisasi",
       accentColor: "#dbeafe",
       category: "Web Development",
-      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=85&w=800&auto=format&fit=crop",
+      githubUrl: "https://github.com/andriandwiii/ERP.git",
+      imageUrl: "/img/rintisku1.png",
     },
     {
       id: "siakad",
@@ -81,7 +82,8 @@ export const projectsData = {
       tagline: "Integrated Academic System",
       accentColor: "#f3e8ff",
       category: "Web Development",
-      imageUrl: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=85&w=800&auto=format&fit=crop",
+      githubUrl: "https://github.com/andriandwiii/SistemAkademik.git",
+      imageUrl: "/img/mockup siakad.png",
     },
     {
       id: "rintisku-ui",
@@ -98,7 +100,8 @@ export const projectsData = {
       tagline: "ERP Landing Page Design",
       accentColor: "#fae8ff",
       category: "UI/UX Design",
-      imageUrl: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=85&w=800&auto=format&fit=crop",
+      githubUrl: "https://www.figma.com/design/Skdthski5YdEGcDofCikox/Landing-page-Rintisku?node-id=0-1&t=gyXZ7WAM61P12Mki-0",
+      imageUrl: "/img/figma.png",
     },
     {
       id: "portfolio",
@@ -115,7 +118,8 @@ export const projectsData = {
       tagline: "Interactive Web Experience",
       accentColor: "#f1f5f9",
       category: "Web Development",
-      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=85&w=800&auto=format&fit=crop",
+      githubUrl: "https://github.com/andriandwiii/Portfolio.git",
+      imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
     },
   ],
   en: [
@@ -152,7 +156,8 @@ export const projectsData = {
       tagline: "SME ERP & Digitalization",
       accentColor: "#dbeafe",
       category: "Web Development",
-      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=85&w=800&auto=format&fit=crop",
+      githubUrl: "https://github.com/andriandwiii/ERP.git",
+      imageUrl: "/img/rintisku1.png",
     },
     {
       id: "siakad",
@@ -169,7 +174,8 @@ export const projectsData = {
       tagline: "Integrated Academic System",
       accentColor: "#f3e8ff",
       category: "Web Development",
-      imageUrl: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=85&w=800&auto=format&fit=crop",
+      githubUrl: "https://github.com/andriandwiii/SistemAkademik.git",
+      imageUrl: "/img/mockup siakad.png",
     },
     {
       id: "rintisku-ui",
@@ -186,7 +192,8 @@ export const projectsData = {
       tagline: "ERP Landing Page Design",
       accentColor: "#fae8ff",
       category: "UI/UX Design",
-      imageUrl: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=85&w=800&auto=format&fit=crop",
+      githubUrl: "https://www.figma.com/design/Skdthski5YdEGcDofCikox/Landing-page-Rintisku?node-id=0-1&t=gyXZ7WAM61P12Mki-0",
+      imageUrl: "/img/figma.png",
     },
     {
       id: "portfolio",
@@ -203,7 +210,8 @@ export const projectsData = {
       tagline: "Interactive Web Experience",
       accentColor: "#f1f5f9",
       category: "Web Development",
-      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=85&w=800&auto=format&fit=crop",
+      githubUrl: "https://github.com/andriandwiii/Portfolio.git",
+      imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
     },
   ]
 };
@@ -274,42 +282,42 @@ Memverifikasi logika estimasi potensi panen berbasis Efisiensi Biologis, komunik
     rintisku: {
       title: "Rintisku.id — Digitalisasi Pencatatan UMKM",
       sections: {
-        problem: `Banyak UMKM lokal masih menggunakan pencatatan manual yang rentan hilang, kotor, dan sulit dipantau secara real-time. Hal ini menyebabkan kesulitan dalam mengontrol stok barang dan memonitor arus kas harian.
+        problem: `UMKM di Kabupaten Madiun menghadapi kendala dalam mengelola data operasional yang masih terpisah-pisah antar divisi (Gudang, Produksi, SDM, dan Penjualan). Catatan stok, produksi, dan laporan penjualan sering kali tidak akurat. Selain itu, verifikasi kinerja harian karyawan sering kali tidak terdokumentasi secara objektif, dan terdapat hambatan dalam perhitungan Harga Pokok Penjualan (HPP) secara akurat.`,
 
-Selain itu, rekapan laporan akhir bulan memakan waktu berhari-hari karena harus mencocokkan nota kertas satu per satu.`,
+        solution: `Saya mengembangkan platform Enterprise Resource Planning (ERP) berbasis web terintegrasi dengan fitur utama:
 
-        solution: `Saya membangun platform Enterprise Resource Planning (ERP) khusus UMKM yang berfokus pada kemudahan penggunaan:
+**Manajemen Pengguna & Autentikasi**
+Sistem login aman dengan implementasi JWT, *blacklist token*, serta *Role-Based Access Control* (SUPERADMIN, HR, PRODUKSI, GUDANG, KEUANGAN).
 
-**Modul Inventaris Cerdas**
-Pencatatan barang masuk dan keluar dengan notifikasi stok menipis otomatis.
+**Sistem Penugasan Produksi (Batch Management)**
+Sistem pelacakan produksi yang mengatur penugasan personel ke dalam siklus (batch) produksi yang tepat, mencegah duplikasi penugasan, serta otomatisasi sinkronisasi progres output.
 
-**Modul SDM & Penggajian**
-Sistem presensi berbasis Geofencing API yang memvalidasi lokasi karyawan secara otomatis, terintegrasi dengan perhitungan gaji.
+**Logbook Pekerjaan Terintegrasi**
+Fitur pelaporan harian (jam kerja, jumlah output, unggah foto bukti) yang terintegrasi dengan alur validasi berjenjang (Approve/Reject/Revisi) oleh departemen HR.
 
-**Pencatatan Keuangan Terintegrasi**
-Setiap transaksi inventaris akan otomatis terhubung ke jurnal kas, meminimalisir kesalahan input manual.
+**Rekapitulasi Kinerja & Analisis**
+Algoritma kalkulasi skor otomatis (skala 0-100) berdasarkan metrik kehadiran dan pencapaian produksi, lengkap dengan visualisasi dashboard reaktif dan fitur Export ke format Excel.`,
 
-**Laporan Otomatis**
-Dashboard yang menghasilkan laporan laba rugi dan ringkasan transaksi dalam satu klik.`,
+        challenges: `**Tantangan 1: Integritas & Relasi Data Operasional**
+Mencegah duplikasi data penugasan dan memastikan integritas data. Solusi: Menggabungkan data pengguna dengan identitas operasional melalui relasi alamat email, dan menyematkan \`karyawan_id\` secara langsung ke dalam *payload* JWT.
 
-        challenges: `**Tantangan 1: UI/UX untuk Pengguna Awam**
-Banyak pelaku UMKM yang belum terbiasa dengan aplikasi kompleks. Solusi: Menggunakan pendekatan desain minimalis dengan font besar dan tombol yang jelas, serta alur kerja yang dipandu lapis demi lapis (step-by-step wizard).
+**Tantangan 2: Performa N+1 Query pada Rekapitulasi**
+Menyajikan laporan performa dari ribuan data mentah logbook dan presensi. Solusi: Menerapkan strategi *bulk query*, penggabungan tabel (JOIN) yang efisien, dan algoritma pemetaan harian (\`dailyMap\`) untuk menghindari beban komputasi berlebih di sisi server.
 
-**Tantangan 2: Integritas Data Relasional**
-Memastikan bahwa perubahan harga modal di satu transaksi tidak merusak laporan bulan-bulan sebelumnya. Solusi: Implementasi snapshot harga pada tabel transaksi di MySQL alih-alih merelasikan langsung ke tabel master barang.
+**Tantangan 3: Mencegah Human Error dalam Produksi**
+Sinkronisasi progres produksi sering meleset jika diinput manual. Solusi: Membangun fungsi \`recalculateBatchProgress\` yang secara real-time menghitung ulang output hanya dari logbook yang berstatus "Approved", lalu otomatis mengubah status batch menjadi "Completed".`,
 
-**Tantangan 3: Akurasi Geofencing**
-Sinyal GPS di area perkotaan padat sering meleset. Solusi: Menggunakan radius toleransi dinamis dan kombinasi GPS + WiFi positioning untuk meningkatkan akurasi lokasi presensi.`,
+        testing: `**Fase 1 — Pengujian Fungsional (Black-box Testing)**
+Melakukan simulasi alur penugasan karyawan pada setiap batch produksi dan pengisian logbook harian untuk memastikan validitas sinkronisasi data serta keamanan hak akses sesuai peran masing-masing pengguna.
 
-        testing: `**Fase 1 — Uji Fungsi Internal**
-Melakukan serangkaian skenario pengujian menggunakan Postman dan Jest untuk memastikan API merespons dengan benar terhadap input anomali (misal: qty negatif).
-
-**Fase 2 — User Acceptance Testing (UAT)**
-Mengujicobakan purwarupa ke 3 UMKM di Madiun. Umpan balik yang diterima sangat berharga, salah satunya adalah penambahan fitur "Simpan Sementara/Draft" saat pelanggan sedang mengantri dan kasir belum selesai menginput.`,
+**Fase 2 — Validasi Bisnis & Inkubasi (SEMESTA UNS)**
+Terpilih sebagai salah satu tim yang lolos pendanaan dalam program Sebelas Maret Startup Academy (SEMESTA UNS). Selama program, kami mendapat mentoring rutin dari ahli bisnis dan teknologi, serta berkesempatan demo day di Surabaya Great Expo untuk pitching langsung di hadapan para expert dan calon investor. Proses pitching memberikan masukan berharga terkait validasi model bisnis dan arah pengembangan produk. Saat ini, RINTISKU.ID telah digunakan oleh 30 pengguna aktif dari kalangan UMKM. Program ini sangat mengasah kemampuan validasi bisnis, pengembangan produk berbasis kebutuhan pengguna nyata, serta komunikasi persuasif di hadapan audiens profesional.`,
       },
       documentation: [
-        { image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200&auto=format&fit=crop", caption: "Perancangan Skema Database ERP UMKM" },
-        { image: "https://images.unsplash.com/photo-1623282033815-40b05d96c903?q=80&w=1200&auto=format&fit=crop", caption: "Implementasi Backend API menggunakan Node.js" },
+        { image: "/img/rintisku1.png", caption: "Mockup Rintisku" },
+        { image: "/img/rintisku2.png", caption: "Landing Page Rintisku" },
+        { image: "/img/rintisku3 login screen.png", caption: "Halaman Login Rintisku" },
+        { image: "/img/Dokumentasi.jpeg", caption: "Kegiatan Diskusi dan Validasi Produk Rintisku.id bersama Tim/Mentor" },
       ],
     },
 
@@ -353,7 +361,9 @@ Pengujian fungsionalitas sistem secara menyeluruh mencakup alur kerja dari penda
 Demonstrasi sistem kepada pihak sekolah mitra untuk mendapatkan umpan balik langsung dari end-user (admin sekolah, guru, dan siswa).`,
       },
       documentation: [
-        { image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=85&w=1200&auto=format&fit=crop", caption: "Dashboard Sistem Informasi Akademik" },
+        { image: "/img/siakadmockup.png", caption: "Mockup Sistem Informasi Akademik" },
+        { image: "/img/siakadd.png", caption: "Dashboard Kurikulum Sistem Informasi Akademik" },
+        { image: "/img/siakad.png", caption: "Halaman Login SIAKAD" },
       ],
     },
 
@@ -397,7 +407,7 @@ Presentasi desain kepada tim development dan product manager untuk memvalidasi f
 Melakukan 3 iterasi desain berdasarkan umpan balik, termasuk penyesuaian hierarki CTA, penambahan section FAQ, dan penyempurnaan responsive layout untuk mobile.`,
       },
       documentation: [
-        { image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=85&w=1200&auto=format&fit=crop", caption: "Proses Wireframing & UI Design di Figma" },
+        { image: "/img/figma.png", caption: "Proses Wireframing & UI Design di Figma" },
       ],
     },
 
@@ -523,42 +533,42 @@ Verified Biological Efficiency-based harvest potential estimation logic, two-way
     rintisku: {
       title: "Rintisku.id — SME Digital Record-Keeping",
       sections: {
-        problem: `Many local SMEs still rely on manual record-keeping that is prone to loss, damage, and difficult to monitor in real-time. This causes difficulties in controlling stock and monitoring daily cash flow.
+        problem: `SMEs in Madiun Regency faced significant challenges managing operational data that was fragmented across divisions (Warehouse, Production, HR, and Sales). Stock records, production logs, and sales reports were frequently inaccurate. Additionally, daily employee performance verification was not documented objectively, creating bottlenecks in calculating accurate Cost of Goods Sold (COGS).`,
 
-Furthermore, end-of-month report compilation takes days because of the need to match paper receipts one by one.`,
+        solution: `I developed an integrated web-based Enterprise Resource Planning (ERP) platform with the following core features:
 
-        solution: `I built an Enterprise Resource Planning (ERP) platform specifically for SMEs, focusing on ease of use:
+**Authentication & User Management**
+A secure login system implementing JWT with token blacklisting and strict Role-Based Access Control (SUPERADMIN, HR, PRODUCTION, WAREHOUSE, FINANCE).
 
-**Smart Inventory Module**
-Recording incoming and outgoing goods with automatic low-stock notifications.
+**Production Batch Management**
+A tracking system that accurately assigns personnel to specific production cycles (batches), prevents duplicate assignments, and automates output progress synchronization.
 
-**HR & Payroll Module**
-Geofencing API-based attendance system that automatically validates employee location, integrated with salary calculation.
+**Integrated Work Logbook**
+A daily reporting feature (working hours, production output, photo evidence upload) integrated with a multi-tier validation workflow (Approve/Reject/Revise) handled by the HR department.
 
-**Integrated Financial Recording**
-Every inventory transaction is automatically linked to the cash journal, minimizing manual input errors.
+**Performance Recapitulation & Analytics**
+An automated scoring algorithm (0-100 scale) based on attendance and production metrics, complete with reactive dashboard visualizations and an Excel export feature.`,
 
-**Automated Reports**
-Dashboard that generates profit & loss reports and transaction summaries in one click.`,
+        challenges: `**Challenge 1: Operational Data Integrity & Relations**
+Preventing duplicate assignments and ensuring data integrity. Solution: Merged user account data with operational employee identities via email relations, injecting the \`karyawan_id\` directly into the JWT payload.
 
-        challenges: `**Challenge 1: UI/UX for Non-Technical Users**
-Many SME operators are not accustomed to complex applications. Solution: Using a minimalist design approach with large fonts and clear buttons, along with step-by-step wizard guided workflows.
+**Challenge 2: N+1 Query Performance Issue**
+Generating performance reports from thousands of raw logbook and attendance data entries. Solution: Implemented bulk query strategies, efficient JOINs, and a daily mapping algorithm (\`dailyMap\`) to prevent excessive server-side computational load.
 
-**Challenge 2: Relational Data Integrity**
-Ensuring that cost price changes in one transaction don't corrupt previous months' reports. Solution: Implementing price snapshots in the MySQL transaction table instead of directly relating to the master goods table.
+**Challenge 3: Mitigating Human Error in Production**
+Manual production tracking is prone to calculation errors. Solution: Built a \`recalculateBatchProgress\` function that aggregates output strictly from "Approved" logbooks in real-time, subsequently auto-updating the batch status to "Completed" when targets are met.`,
 
-**Challenge 3: Geofencing Accuracy**
-GPS signals in dense urban areas often drift. Solution: Using dynamic tolerance radius and a combination of GPS + WiFi positioning to improve attendance location accuracy.`,
+        testing: `**Phase 1 — Functional Testing (Black-box Testing)**
+Conducted simulation testing on the employee assignment workflow for production batches and daily logbook entries to ensure data synchronization validity and role-based access security.
 
-        testing: `**Phase 1 — Internal Function Testing**
-Conducting a series of test scenarios using Postman and Jest to ensure APIs respond correctly to anomalous inputs (e.g., negative quantity).
-
-**Phase 2 — User Acceptance Testing (UAT)**
-Testing the prototype with 3 SMEs in Madiun. The feedback received was invaluable, including the addition of a "Save as Draft" feature when customers are queuing and the cashier hasn't finished inputting.`,
+**Phase 2 — Business Validation & Incubation (SEMESTA UNS)**
+Selected as one of the teams that received funding in the Sebelas Maret Startup Academy (SEMESTA UNS) program. During the program, we received regular mentoring from business and technology experts, and had the opportunity to conduct a demo day at the Surabaya Great Expo, pitching the product directly to experts and potential investors. The pitching process provided valuable feedback regarding business model validation and future product development. To date, RINTISKU.ID has been used by 30 active SME users. This program significantly honed skills in business validation, user-centric product development, and persuasive communication in front of a professional audience.`,
       },
       documentation: [
-        { image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200&auto=format&fit=crop", caption: "SME ERP Database Schema Design" },
-        { image: "https://images.unsplash.com/photo-1623282033815-40b05d96c903?q=80&w=1200&auto=format&fit=crop", caption: "Backend API Implementation using Node.js" },
+        { image: "/img/rintisku1.png", caption: "Mockup Rintisku" },
+        { image: "/img/rintisku2.png", caption: "Landing Page Rintisku" },
+        { image: "/img/rintisku3 login screen.png", caption: "Rintisku Login Screen" },
+        { image: "/img/Dokumentasi.jpeg", caption: "Rintisku.id Product Discussion and Validation Session" },
       ],
     },
 
@@ -602,7 +612,9 @@ Comprehensive system functionality testing covering the workflow from student re
 System demonstration to partner schools to get direct feedback from end-users (school admin, teachers, and students).`,
       },
       documentation: [
-        { image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=85&w=1200&auto=format&fit=crop", caption: "Academic Information System Dashboard" },
+        { image: "/img/siakadmockup.png", caption: "Academic Information System Mockup" },
+        { image: "/img/siakadd.png", caption: "Curriculum Dashboard - Academic Information System" },
+        { image: "/img/siakad.png", caption: "SIAKAD Login Page" },
       ],
     },
 
@@ -646,7 +658,7 @@ Presented designs to the development team and product manager to validate techni
 Performed 3 design iterations based on feedback, including CTA hierarchy adjustments, FAQ section addition, and responsive layout refinements for mobile.`,
       },
       documentation: [
-        { image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=85&w=1200&auto=format&fit=crop", caption: "Wireframing & UI Design Process in Figma" },
+        { image: "/img/figma.png", caption: "Wireframing & UI Design Process in Figma" },
       ],
     },
 

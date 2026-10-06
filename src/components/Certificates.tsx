@@ -16,10 +16,17 @@ const certificatesData = {
       ),
       tags: ["Sertifikasi Profesi", "Programmer", "Nasional"],
       tasks: [
-        <>Memenuhi standar kompetensi nasional dalam perancangan dan pembuatan perangkat lunak.</>,
-        <>Menerapkan praktik terbaik dalam penulisan kode yang aman dan efisien.</>
+        <>Menganalisis dan menggunakan spesifikasi perangkat lunak untuk merancang arsitektur sistem.</>,
+        <>Menulis kode program yang bersih (clean code) sesuai pedoman dan praktik terbaik industri.</>,
+        <>Mengimplementasikan logika pemrograman terstruktur yang efisien dan mudah dibaca.</>,
+        <>Menerapkan paradigma Pemrograman Berorientasi Objek (OOP) agar kode dapat digunakan kembali.</>,
+        <>Mengintegrasikan pustaka (library) dan komponen pre-existing untuk efisiensi pengembangan.</>,
+        <>Merancang dan mengimplementasikan mekanisme akses basis data secara aman.</>,
+        <>Menyusun dokumentasi kode program untuk mempermudah pemeliharaan sistem.</>,
+        <>Melakukan pelacakan dan perbaikan kesalahan (debugging) secara sistematis.</>,
+        <>Melaksanakan pengujian unit (unit testing) untuk memastikan kualitas fungsionalitas kode.</>
       ],
-      credentialUrl: "https://bnsp.go.id/",
+      credentialUrl: "https://drive.google.com/file/d/1g5jFWTOBHoHrkjmQfg6_BihS4ytWVgrZ/view?usp=sharing",
       images: [
         { title: "Sertifikat BNSP", image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop", alt: "Sertifikat BNSP" }
       ]
@@ -40,7 +47,7 @@ const certificatesData = {
         <>Merancang dan mengelola indeks pada basis data skala besar.</>,
         <>Memecahkan masalah pada pengelolaan data yang kompleks.</>
       ],
-      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
+      credentialUrl: "https://coursera.org/verify/KNJBVKU4V62F",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -60,7 +67,7 @@ const certificatesData = {
         <>Merancang struktur dan relasi arsitektur basis data relasional.</>,
         <>Mengimplementasikan dan menguji sistem basis data dari tahap awal hingga akhir.</>
       ],
-      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
+      credentialUrl: "https://coursera.org/verify/Z7SPORC8NHTE",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -80,7 +87,7 @@ const certificatesData = {
         <>Menguasai arsitektur pengembangan frontend modern.</>,
         <>Mengintegrasikan dan mengelola sistem backend secara efisien.</>
       ],
-      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
+      credentialUrl: "https://coursera.org/verify/TUQI4QICYJ5R",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -100,7 +107,7 @@ const certificatesData = {
         <>Membangun aplikasi mobile lintas platform (iOS dan Android).</>,
         <>Mengimplementasikan navigasi kompleks dan pengelolaan state yang reaktif.</>
       ],
-      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
+      credentialUrl: "https://coursera.org/verify/GOIG2WD5IMDA",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -119,10 +126,17 @@ const certificatesData = {
       ),
       tags: ["Professional Certification", "Programmer", "National"],
       tasks: [
-        <>Met national competency standards in software design and development.</>,
-        <>Implemented best practices in writing secure and efficient code.</>
+        <>Analyzed and applied software specifications for system architecture design.</>,
+        <>Authored clean code adhering to industry guidelines and best practices.</>,
+        <>Implemented structured programming logic for efficient and readable algorithms.</>,
+        <>Applied Object-Oriented Programming (OOP) paradigms for highly reusable code.</>,
+        <>Integrated libraries and pre-existing components for development efficiency.</>,
+        <>Designed and implemented secure database access mechanisms.</>,
+        <>Drafted program code documentation to streamline system maintenance.</>,
+        <>Systematically traced and resolved bugs (debugging) to ensure system reliability.</>,
+        <>Executed unit testing to continuously validate functional code quality.</>
       ],
-      credentialUrl: "https://bnsp.go.id/",
+      credentialUrl: "https://drive.google.com/file/d/1g5jFWTOBHoHrkjmQfg6_BihS4ytWVgrZ/view?usp=sharing",
       images: [
         { title: "BNSP Certificate", image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop", alt: "BNSP Certificate" }
       ]
@@ -143,7 +157,7 @@ const certificatesData = {
         <>Designed and managed indexes on large-scale databases.</>,
         <>Troubleshot complex data management issues.</>
       ],
-      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
+      credentialUrl: "https://coursera.org/verify/KNJBVKU4V62F",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -163,7 +177,7 @@ const certificatesData = {
         <>Designed the structure and relations of a relational database architecture.</>,
         <>Implemented and tested the database system from start to finish.</>
       ],
-      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
+      credentialUrl: "https://coursera.org/verify/Z7SPORC8NHTE",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -183,7 +197,7 @@ const certificatesData = {
         <>Mastered modern frontend development architectures.</>,
         <>Integrated and managed backend systems efficiently.</>
       ],
-      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
+      credentialUrl: "https://coursera.org/verify/TUQI4QICYJ5R",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
@@ -203,7 +217,7 @@ const certificatesData = {
         <>Built cross-platform mobile applications (iOS and Android).</>,
         <>Implemented complex navigation and reactive state management.</>
       ],
-      credentialUrl: "https://coursera.org/share/4eb3b138e0a325b78ff57153663ec506",
+      credentialUrl: "https://coursera.org/verify/GOIG2WD5IMDA",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
