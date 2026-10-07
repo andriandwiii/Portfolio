@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Halo } from "./ui/Halo";
 import { useLanguage } from "../context/LanguageContext";
 
-const MEDIA_SRC = "/img/bg2A.png";
+const MEDIA_SRC_DESKTOP = "/img/bg2A.png";
+const MEDIA_SRC_MOBILE = "/img/bg2AMobile.png";
 
 interface HeroProps {
   onExpanded: () => void;
@@ -162,12 +163,15 @@ export default function Hero({ onExpanded }: HeroProps) {
             maxHeight: "85vh",
           }}
         >
-          <img
-            src={MEDIA_SRC}
-            alt="Portfolio hero"
-            className="w-full h-full object-cover object-top block bg-black"
-            draggable={false}
-          />
+          <picture className="w-full h-full block">
+            <source media="(min-width: 768px)" srcSet={MEDIA_SRC_DESKTOP} />
+            <img
+              src={MEDIA_SRC_MOBILE}
+              alt="Portfolio hero"
+              className="w-full h-full object-cover object-top block bg-black"
+              draggable={false}
+            />
+          </picture>
 
           {/* Image overlay */}
           <motion.div
@@ -182,7 +186,7 @@ export default function Hero({ onExpanded }: HeroProps) {
       <div className="absolute inset-0 z-0 pointer-events-none flex flex-col items-center justify-center gap-2 px-4">
         <motion.div
           style={{ x: `-${titleX}vw`, fontFamily: "'Outfit', sans-serif" }}
-          className="will-change-transform flex justify-center w-full relative h-[clamp(4rem,10vw,14rem)]"
+          className="will-change-transform flex justify-center w-full relative h-[clamp(3.2rem,13vw,14rem)] md:h-[clamp(4rem,10vw,14rem)]"
         >
           <AnimatePresence mode="wait">
             <motion.span
@@ -191,7 +195,7 @@ export default function Hero({ onExpanded }: HeroProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="absolute font-bold text-[clamp(4rem,10vw,14rem)] leading-[0.8] tracking-[-0.04em] text-center uppercase whitespace-nowrap"
+              className="absolute font-bold text-[clamp(3.2rem,13vw,14rem)] md:text-[clamp(4rem,10vw,14rem)] leading-[0.8] tracking-[-0.04em] text-center uppercase whitespace-nowrap"
               style={{ WebkitTextStroke: "2px rgba(255,255,255,0.4)", color: "transparent" }}
             >
               {wordIndex === 0 ? "ANDRIAN" : t("heroRole")}
@@ -200,7 +204,7 @@ export default function Hero({ onExpanded }: HeroProps) {
         </motion.div>
         <motion.div
           style={{ x: `${titleX}vw`, fontFamily: "'Outfit', sans-serif" }}
-          className="will-change-transform flex justify-center w-full relative h-[clamp(4rem,10vw,14rem)]"
+          className="will-change-transform flex justify-center w-full relative h-[clamp(3.2rem,13vw,14rem)] md:h-[clamp(4rem,10vw,14rem)]"
         >
           <AnimatePresence mode="wait">
             <motion.span
@@ -209,7 +213,7 @@ export default function Hero({ onExpanded }: HeroProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
-              className="absolute font-bold text-[clamp(4rem,10vw,14rem)] leading-[0.8] tracking-[-0.04em] text-center uppercase whitespace-nowrap"
+              className="absolute font-bold text-[clamp(3.2rem,13vw,14rem)] md:text-[clamp(4rem,10vw,14rem)] leading-[0.8] tracking-[-0.04em] text-center uppercase whitespace-nowrap"
               style={{ WebkitTextStroke: "2px rgba(255,255,255,0.4)", color: "transparent" }}
             >
               {wordIndex === 0 ? "DWI SAPUTRA" : t("heroDesc")}
