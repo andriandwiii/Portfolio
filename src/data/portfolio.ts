@@ -15,6 +15,7 @@ export interface Project {
   accentColor: string;
   category: string;
   githubUrl?: string;
+  siteUrl?: string;
   imageUrl?: string;
 }
 
@@ -65,6 +66,7 @@ export const projectsData = {
       accentColor: "#dbeafe",
       category: "Web Development",
       githubUrl: "https://github.com/andriandwiii/ERP.git",
+      siteUrl: "https://rintisku.id/",
       imageUrl: "/img/rintisku1.png",
     },
     {
