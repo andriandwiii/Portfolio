@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Halo } from "./ui/Halo";
 import { useLanguage } from "../context/LanguageContext";
 
-const MEDIA_SRC = "/img/bg1A.png";
+const MEDIA_SRC = "/img/bg2A.png";
 
 interface HeroProps {
   onExpanded: () => void;
