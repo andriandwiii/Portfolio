@@ -35,7 +35,7 @@ const certificatesData = {
       id: "C2",
       company: "Meta",
       role: "Advanced MySQL Topics",
-      period: "Feb 2025 - Mar 2025",
+      period: "Feb 2025",
       description: (
         <>
           Mempelajari topik tingkat lanjut manajemen basis data relasional menggunakan MySQL melalui program pelatihan Meta di Coursera, mencakup <strong>optimasi kueri, indeks, dan pemecahan masalah data</strong>.
@@ -56,7 +56,7 @@ const certificatesData = {
       id: "C3",
       company: "Meta",
       role: "Database Engineer Capstone",
-      period: "Feb 2025 - Mar 2025",
+      period: "Feb 2025",
       description: (
         <>
           Menyelesaikan proyek akhir (capstone) sertifikasi Database Engineer dari Meta di Coursera, yang melibatkan perancangan, implementasi, dan pengujian <strong>sistem basis data secara end-to-end</strong>.
@@ -76,7 +76,7 @@ const certificatesData = {
       id: "C4",
       company: "Meta",
       role: "The Full Stack",
-      period: "Feb 2025 - Mar 2025",
+      period: "Feb 2025",
       description: (
         <>
           Mengikuti program pelatihan komprehensif dari Meta via Coursera yang mencakup <strong>prinsip pengembangan perangkat lunak secara menyeluruh</strong> dari sisi antarmuka (frontend) hingga pengelolaan server (backend).
@@ -96,7 +96,7 @@ const certificatesData = {
       id: "C5",
       company: "Meta",
       role: "React Native",
-      period: "Feb 2025 - Mar 2025",
+      period: "Feb 2025",
       description: (
         <>
           Menyelesaikan kursus profesional bersertifikat dari Meta melalui Coursera yang membahas pengembangan aplikasi seluler lintas platform menggunakan <strong>React Native, pengelolaan komponen, serta navigasi aplikasi</strong>.
@@ -145,7 +145,7 @@ const certificatesData = {
       id: "C2",
       company: "Meta",
       role: "Advanced MySQL Topics",
-      period: "Feb 2025 - Mar 2025",
+      period: "Feb 2025",
       description: (
         <>
           Learned advanced relational database management topics using MySQL through Meta's training program on Coursera, including <strong>query optimization, indexing, and data troubleshooting</strong>.
@@ -166,7 +166,7 @@ const certificatesData = {
       id: "C3",
       company: "Meta",
       role: "Database Engineer Capstone",
-      period: "Feb 2025 - Mar 2025",
+      period: "Feb 2025",
       description: (
         <>
           Completed the final capstone project for the Database Engineer certification from Meta on Coursera, involving the design, implementation, and testing of an <strong>end-to-end database system</strong>.
@@ -186,7 +186,7 @@ const certificatesData = {
       id: "C4",
       company: "Meta",
       role: "The Full Stack",
-      period: "Feb 2025 - Mar 2025",
+      period: "Feb 2025",
       description: (
         <>
           Participated in a comprehensive training program from Meta via Coursera covering <strong>end-to-end software development principles</strong>, from the user interface (frontend) to server management (backend).
@@ -206,7 +206,7 @@ const certificatesData = {
       id: "C5",
       company: "Meta",
       role: "React Native",
-      period: "Feb 2025 - Mar 2025",
+      period: "Feb 2025",
       description: (
         <>
           Completed a certified professional course from Meta through Coursera covering cross-platform mobile application development using <strong>React Native, component management, and app navigation</strong>.
