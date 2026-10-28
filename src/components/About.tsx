@@ -122,7 +122,7 @@ export default function About() {
             {/* Photo Card */}
             <motion.div
               {...fade(0.2)}
-              className="w-full max-w-[320px] md:max-w-[400px] lg:max-w-none mx-auto lg:mx-0 lg:w-[30%] flex-shrink-0 perspective-[1200px]"
+              className="w-full max-w-[320px] md:max-w-[400px] lg:max-w-none mx-auto lg:mx-0 lg:w-[30%] flex-shrink-0 perspective-[1200px] lg:sticky lg:top-32 lg:self-start"
             >
               <TiltPhotoCard />
             </motion.div>
