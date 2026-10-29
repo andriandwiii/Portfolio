@@ -734,7 +734,42 @@ export const socialLinks = {
 };
 
 export const techStack: Record<string, string[]> = {
-  "Hard Skills": ["Fullstack Development", "Mobile App Dev", "Web Dev", "RESTful API", "Database Management", "IoT", "Computer Vision", "YOLO", "Machine Learning", "FastAPI", "Deployment", "System Integration", "UI/UX"],
-  "Tools & Core": ["React Native", "Node.js", "Knex.js", "MySQL", "ESP32", "Numpy", "Pandas", "Matplotlib", "Scikit-learn"],
-  "Soft Skills": ["Problem Solving", "Analytical Thinking", "Critical Thinking", "Teamwork & Collaboration", "Continuous Learning"]
+  "Hard Skills": [
+    "Next.js",
+    "React",
+    "React Native",
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "Tailwind CSS",
+    "MySQL",
+    "ERP",
+    "Database Management",
+    "Full-Stack Development",
+    "Web Development",
+    "Mobile Development",
+    "Backend Development",
+    "Frontend Development",
+    "RESTful API",
+    "IoT & AI (YOLO)",
+  ],
+  "Tools & Core": [
+    "Git",
+    "Figma",
+    "Draw.io",
+    "Google Workspace",
+    "Microsoft Office",
+    "Postman",
+    "ESP32",
+    "FastAPI",
+  ],
+  "Soft Skills": [
+    "Kerjasama Tim",
+    "Manajemen Waktu",
+    "Manajemen Proyek",
+    "Adaptasi",
+    "Problem Solving",
+    "Critical Thinking",
+  ],
 };
