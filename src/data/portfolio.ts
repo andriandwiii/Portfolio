@@ -39,7 +39,7 @@ export const projectsData = {
       role: "IoT & Mobile Developer",
       period: "2026",
       highlight:
-        "Sistem pemantauan budidaya jamur terintegrasi IoT dan AI menggunakan YOLO untuk mendeteksi penyakit Black Mold secara otomatis.",
+        "Sistem pemantauan budidaya jamur terintegrasi IoT, backend FastAPI, dan AI YOLO untuk mendeteksi penyakit Black Mold serta memprediksi risiko panen secara otomatis.",
       tags: ["React Native", "Python (FastAPI)", "YOLO", "ESP32"],
       hasCaseStudy: true,
       gradient: "from-emerald-500 to-teal-800",
@@ -132,7 +132,7 @@ export const projectsData = {
       role: "IoT & Mobile Developer",
       period: "2026",
       highlight:
-        "IoT and AI integrated mushroom cultivation monitoring system using YOLO to automatically detect Black Mold disease.",
+        "IoT and AI integrated mushroom cultivation monitoring system powered by a FastAPI backend and YOLO to automatically detect Black Mold and predict harvest risk.",
       tags: ["React Native", "Python (FastAPI)", "YOLO", "ESP32"],
       hasCaseStudy: true,
       gradient: "from-emerald-500 to-teal-800",
@@ -236,8 +236,9 @@ Secara tradisional, petani mengandalkan pengawasan visual dan manual terhadap ko
 **1. Hardware IoT (ESP32 + DHT22)**
 Sensor presisi tinggi DHT22 yang terhubung ke mikrokontroler ESP32 membaca data suhu dan kelembapan secara real-time dari dalam kumbung jamur. Data dikirimkan secara berkala ke server backend untuk dianalisis.
 
-**2. Backend AI (Python FastAPI)**
-Server backend menjadi otak sistem yang menjalankan dua model kecerdasan buatan:
+**2. Backend AI & API Service (Python FastAPI)**
+Server backend dibangun menggunakan framework **FastAPI** berkinerja tinggi sebagai pusat orkestrasi data, manajemen RESTful API, dan inferensi AI:
+• **RESTful API Asinkron:** Menyediakan endpoint API berkecepatan tinggi berbasis asynchronous (ASGI) untuk menerima data telemetri dari mikrokontroler ESP32, melayani permintaan data aplikasi mobile, dan mengelola alur autentikasi.
 • **Deteksi Visual YOLO (YOLOv11s):** Memproses gambar hasil pemindaian kamera langsung dari aplikasi mobile untuk mendeteksi persentase luasan area gejala black mold pada baglog secara instan.
 • **Prediksi Risiko — Regresi Linier Polinomial:** Meleburkan data sensor IoT (suhu, kelembapan) dengan hasil deteksi visual YOLO untuk menghasilkan prediksi risiko black mold (0%-100%) berbasis 5 parameter: suhu, kelembapan, fase pertumbuhan, durasi stres lingkungan, dan persentase area terinfeksi.
 • **Estimasi Potensi Panen:** Menggunakan metode Efisiensi Biologis dengan konstanta produktivitas 0,4 kg/baglog yang tervalidasi mitra petani, direduksi proporsional berdasarkan prinsip Yield Loss dari output model prediksi.
@@ -258,7 +259,7 @@ Baglog jamur memiliki variasi warna, tekstur, dan bentuk yang tinggi, membuat de
 Memproses gambar dari kamera mobile dan mengirimkannya ke server AI tanpa delay yang mengganggu UX. Solusi: Mengoptimalkan payload gambar dengan kompresi JPEG sebelum dikirim, dan mengimplementasikan loading state yang informatif di sisi frontend.`,
 
         testing: `**Fase 1 — Pengujian Fungsionalitas (Black Box Testing)**
-Menguji kelancaran aliran data dari sensor IoT, pemrosesan backend, hingga tampilan di aplikasi mobile. Semua fitur utama (monitoring real-time, scan kamera, prediksi risiko, estimasi panen, push notification) diverifikasi berfungsi sesuai spesifikasi.
+Menguji kelancaran aliran data dari sensor IoT, pemrosesan endpoint REST API di backend FastAPI, hingga tampilan di aplikasi mobile. Semua fitur utama (monitoring real-time, scan kamera, prediksi risiko, estimasi panen, push notification) diverifikasi berfungsi sesuai spesifikasi.
 
 **Fase 2 — Evaluasi Model Computer Vision (YOLO)**
 Mengukur akurasi model YOLOv11s dalam mendeteksi area infeksi black mold menggunakan metrik standar:
@@ -487,8 +488,9 @@ Traditionally, farmers rely on visual and manual observation of environmental co
 **1. IoT Hardware (ESP32 + DHT22)**
 High-precision DHT22 sensors connected to an ESP32 microcontroller read real-time temperature and humidity data from inside the mushroom cultivation house. Data is periodically transmitted to the backend server for analysis.
 
-**2. AI Backend (Python FastAPI)**
-The backend server serves as the system's brain, running two AI models:
+**2. AI Backend & API Service (Python FastAPI)**
+The backend server was built using the high-performance **FastAPI** framework, serving as the central hub for data orchestration, asynchronous RESTful API management, and AI inference:
+• **Asynchronous RESTful API:** Provides high-speed ASGI-based endpoints to ingest real-time IoT sensor telemetry from the ESP32 microcontroller, serve mobile application data requests, and manage authentication workflows.
 • **YOLO Visual Detection (YOLOv11s):** Processes images from the mobile app's live camera scan to instantly detect the percentage of black mold symptom area on baglogs.
 • **Risk Prediction — Polynomial Linear Regression:** Fuses IoT sensor data (temperature, humidity) with YOLO detection results to generate black mold risk predictions (0%-100%) based on 5 parameters: temperature, humidity, growth phase, environmental stress duration, and infected area percentage.
 • **Harvest Potential Estimation:** Uses the Biological Efficiency method with a validated productivity constant of 0.4 kg/baglog, proportionally reduced based on Yield Loss principles from the prediction model output.
@@ -509,7 +511,7 @@ Mushroom baglogs have high variation in color, texture, and shape, making black 
 Processing images from the mobile camera and sending them to the AI server without UX-disrupting delay. Solution: Optimized image payload with JPEG compression before transmission, and implemented informative loading states on the frontend.`,
 
         testing: `**Phase 1 — Functional Testing (Black Box Testing)**
-Tested the smooth flow of data from IoT sensors, backend processing, to mobile app display. All main features (real-time monitoring, camera scan, risk prediction, harvest estimation, push notification) were verified to function according to specifications.
+Tested the smooth flow of data from IoT sensors, FastAPI REST API endpoint processing, to mobile app display. All main features (real-time monitoring, camera scan, risk prediction, harvest estimation, push notification) were verified to function according to specifications.
 
 **Phase 2 — Computer Vision Model Evaluation (YOLO)**
 Measured YOLOv11s model accuracy in detecting black mold infection areas using standard metrics:

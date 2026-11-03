@@ -8,51 +8,91 @@ interface CaseStudyProps {
   onClose: () => void;
 }
 
-function renderContent(text: string) {
-  const lines = text.split("\n");
-  return lines.map((line, i) => {
-    // Bold heading lines: **Title**
-    if (/^\*\*[^*]+\*\*$/.test(line.trim())) {
+function renderInline(text: string) {
+  // Regex matches: **bold**, *italic*, and `code`
+  const tokenRegex = /(\*\*[^*]+?\*\*|\*[^*]+?\*|`[^`]+?`)/g;
+  const parts = text.split(tokenRegex);
+
+  return parts.map((part, index) => {
+    if (!part) return null;
+
+    if (part.startsWith("**") && part.endsWith("**") && part.length >= 4) {
       return (
-        <p
-          key={i}
-          className="text-base font-semibold text-black mt-7 mb-2"
-          style={{ fontFamily: "'Outfit', sans-serif" }}
-        >
-          {line.replace(/\*\*/g, "")}
-        </p>
+        <strong key={index} className="text-black font-semibold">
+          {part.slice(2, -2)}
+        </strong>
       );
     }
 
-    // Bullet lines starting with •
-    if (line.startsWith("•")) {
-      const content = line.slice(1).trim();
+    if (part.startsWith("*") && part.endsWith("*") && part.length >= 2) {
       return (
-        <div key={i} className="flex gap-3 mb-2">
+        <em key={index} className="italic text-black/80 font-normal">
+          {part.slice(1, -1)}
+        </em>
+      );
+    }
+
+    if (part.startsWith("`") && part.endsWith("`") && part.length >= 2) {
+      return (
+        <code
+          key={index}
+          className="px-1.5 py-0.5 rounded bg-black/5 font-mono text-[13px] text-violet-700 font-medium border border-black/5"
+        >
+          {part.slice(1, -1)}
+        </code>
+      );
+    }
+
+    return part;
+  });
+}
+
+function renderContent(text: string) {
+  const lines = text.split("\n");
+  return lines.map((line, i) => {
+    const trimmed = line.trim();
+
+    // Empty line → small gap
+    if (trimmed === "") {
+      return <div key={i} className="h-2.5" />;
+    }
+
+    // Bold heading lines: **Title**
+    if (/^\*\*[^*]+?\*\*$/.test(trimmed)) {
+      return (
+        <h4
+          key={i}
+          className="text-base md:text-[17px] font-bold text-black mt-7 mb-2.5 tracking-tight"
+          style={{ fontFamily: "'Outfit', sans-serif" }}
+        >
+          {trimmed.slice(2, -2)}
+        </h4>
+      );
+    }
+
+    // Bullet lines starting with • or - or *
+    if (trimmed.startsWith("•") || trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
+      let content = trimmed;
+      if (content.startsWith("•")) {
+        content = content.slice(1).trim();
+      } else {
+        content = content.slice(2).trim();
+      }
+
+      return (
+        <div key={i} className="flex gap-3 mb-2.5 items-start">
           <span className="mt-[9px] w-1.5 h-1.5 rounded-full bg-violet-500 flex-shrink-0" />
-          <p className="text-[15px] leading-7 text-black/65">{content}</p>
+          <p className="text-[15px] leading-7 text-black/70 flex-1">
+            {renderInline(content)}
+          </p>
         </div>
       );
     }
 
-    // Empty line → small gap
-    if (line.trim() === "") {
-      return <div key={i} className="h-2" />;
-    }
-
-    // Inline bold: **text** inside a line
-    const parts = line.split(/(\*\*[^*]+\*\*)/g);
+    // Regular paragraph (supports inline bold, italic, and code)
     return (
-      <p key={i} className="text-[15px] leading-7 text-black/65 mb-1">
-        {parts.map((part, j) =>
-          /^\*\*[^*]+\*\*$/.test(part) ? (
-            <strong key={j} className="text-black font-semibold">
-              {part.replace(/\*\*/g, "")}
-            </strong>
-          ) : (
-            part
-          )
-        )}
+      <p key={i} className="text-[15px] leading-7 text-black/70 mb-2">
+        {renderInline(line)}
       </p>
     );
   });
