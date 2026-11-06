@@ -6,6 +6,7 @@ import About from "./components/About";
 import InternshipExperience from "./components/InternshipExperience";
 import Projects from "./components/Projects";
 import Certificates from "./components/Certificates";
+import Organizations from "./components/Organizations";
 import CaseStudy from "./components/CaseStudy";
 import Contact from "./components/Contact";
 import { HoverImageLinks } from "./components/ui/HoverImageLinks";
@@ -29,10 +30,13 @@ export default function App() {
       {/* 3. Internship Experience */}
       <InternshipExperience />
 
-      {/* 4. Projects + Case Study trigger */}
+      {/* 4. Organizations */}
+      <Organizations />
+
+      {/* 5. Projects + Case Study trigger */}
       <Projects onOpenCaseStudy={setActiveCaseStudy} />
 
-      {/* 5. Certificates & Awards */}
+      {/* 6. Certificates & Training */}
       <Certificates />
 
       {/* 6. Hover Image Links (Navigation before footer) */}

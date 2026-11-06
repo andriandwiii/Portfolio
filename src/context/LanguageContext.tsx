@@ -45,6 +45,15 @@ const translations = {
     certFocus: "Fokus Area",
     certSkills: "Keterampilan & Kompetensi",
     certShow: "Lihat Kredensial",
+    // Organizations
+    orgTitle1: "Keterlibatan Kampus",
+    orgTitle2: "Organisasi & Kepanitiaan.",
+    orgDesc: "Pengalaman berorganisasi yang melatih kemampuan koordinasi, kerja sama tim, dan kepemimpinan.",
+    orgPeriod: "Periode",
+    orgOverview: "Deskripsi Organisasi",
+    orgFocus: "Bidang Kegiatan",
+    orgTasks: "Tanggung Jawab",
+    orgDocs: "Dokumentasi Kegiatan",
     // Stats
     statProjects: "Proyek Selesai",
     statInternships: "Magang Industri",
@@ -58,6 +67,7 @@ const translations = {
     hoverExperience: "Rekam jejak profesional dan pendidikan.",
     hoverProjects: "Kumpulan karya dan eksplorasi teknis.",
     hoverCertificates: "Sertifikasi dan pelatihan profesional.",
+    hoverOrganizations: "Pengalaman organisasi dan kepanitiaan kampus.",
     hoverContact: "Mari berkolaborasi membangun hal hebat.",
     // CaseStudy
     caseStudyLabel: "Dokumentasi Studi Kasus",
@@ -99,6 +109,15 @@ const translations = {
     certFocus: "Focus Area",
     certSkills: "Skills & Competencies",
     certShow: "Show Credentials",
+    // Organizations
+    orgTitle1: "Campus Involvement",
+    orgTitle2: "Organizations & Committees.",
+    orgDesc: "Organizational experiences that hone coordination skills, teamwork, and leadership.",
+    orgPeriod: "Period",
+    orgOverview: "Organization Overview",
+    orgFocus: "Activity Area",
+    orgTasks: "Responsibilities",
+    orgDocs: "Activity Documentation",
     // Stats
     statProjects: "Projects Completed",
     statInternships: "Industry Internships",
@@ -112,6 +131,7 @@ const translations = {
     hoverExperience: "Professional and educational track record.",
     hoverProjects: "Collection of works and technical explorations.",
     hoverCertificates: "Professional certifications and training.",
+    hoverOrganizations: "Campus organizational and committee experiences.",
     hoverContact: "Let's collaborate to build something great.",
     // CaseStudy
     caseStudyLabel: "Case Study Documentation",

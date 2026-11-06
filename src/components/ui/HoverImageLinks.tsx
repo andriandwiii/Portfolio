@@ -21,6 +21,12 @@ export const HoverImageLinks = () => {
           href="#experience"
         />
         <Link
+          heading="Organizations"
+          subheading={t("hoverOrganizations")}
+          imgSrc={["/img/farewallparty1.jpg", "/img/farewallparty2.jpg"]}
+          href="#organizations"
+        />
+        <Link
           heading="Projects"
           subheading={t("hoverProjects")}
           imgSrc={["/img/growsafe mockup.png", "/img/rintisku1.png"]}
