@@ -82,7 +82,7 @@ const certificatesData = {
           Mengikuti program pelatihan komprehensif dari Meta via Coursera yang mencakup <strong>prinsip pengembangan perangkat lunak secara menyeluruh</strong> dari sisi antarmuka (frontend) hingga pengelolaan server (backend).
         </>
       ),
-      tags: ["Full Stack", "Web Development", "Meta"],
+      tags: ["Full Stack", "Web Development", "Meta", "Coursera"],
       tasks: [
         <>Menguasai arsitektur pengembangan frontend modern.</>,
         <>Mengintegrasikan dan mengelola sistem backend secara efisien.</>
@@ -102,7 +102,7 @@ const certificatesData = {
           Menyelesaikan kursus profesional bersertifikat dari Meta melalui Coursera yang membahas pengembangan aplikasi seluler lintas platform menggunakan <strong>React Native, pengelolaan komponen, serta navigasi aplikasi</strong>.
         </>
       ),
-      tags: ["React Native", "Mobile Development", "Meta"],
+      tags: ["React Native", "Mobile Development", "Meta", "Coursera"],
       tasks: [
         <>Membangun aplikasi mobile lintas platform (iOS dan Android).</>,
         <>Mengimplementasikan navigasi kompleks dan pengelolaan state yang reaktif.</>
@@ -110,6 +110,27 @@ const certificatesData = {
       credentialUrl: "https://coursera.org/verify/GOIG2WD5IMDA",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
+      ]
+    },
+    {
+      id: "C6",
+      company: "University of Glasgow",
+      role: "Generative AI for Project Managers",
+      period: "Feb 2025",
+      description: (
+        <>
+          Mempelajari integrasi AI generatif dalam manajemen proyek melalui program University of Glasgow di Coursera, mencakup <strong>otomasi alur kerja, prompt engineering terstruktur, mitigasi risiko, dan etika AI</strong>.
+        </>
+      ),
+      tags: ["Generative AI", "Project Management", "Prompt Engineering", "Coursera"],
+      tasks: [
+        <>Memanfaatkan AI generatif untuk menyusun jadwal kerja (WBS), perencanaan workshop, dan identifikasi risiko proyek.</>,
+        <>Menerapkan teknik rekayasa prompt (prompt engineering) terstruktur berbasis persona, tugas, batasan, dan format.</>,
+        <>Menjaga tata kelola etika, privasi data rahasia perusahaan, dan validasi output guna mencegah halusinasi AI.</>
+      ],
+      credentialUrl: "https://coursera.org/verify/DG7D0TDW9YLL",
+      images: [
+        { title: "Certificate", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
     }
   ],
@@ -192,7 +213,7 @@ const certificatesData = {
           Participated in a comprehensive training program from Meta via Coursera covering <strong>end-to-end software development principles</strong>, from the user interface (frontend) to server management (backend).
         </>
       ),
-      tags: ["Full Stack", "Web Development", "Meta"],
+      tags: ["Full Stack", "Web Development", "Meta", "Coursera"],
       tasks: [
         <>Mastered modern frontend development architectures.</>,
         <>Integrated and managed backend systems efficiently.</>
@@ -212,7 +233,7 @@ const certificatesData = {
           Completed a certified professional course from Meta through Coursera covering cross-platform mobile application development using <strong>React Native, component management, and app navigation</strong>.
         </>
       ),
-      tags: ["React Native", "Mobile Development", "Meta"],
+      tags: ["React Native", "Mobile Development", "Meta", "Coursera"],
       tasks: [
         <>Built cross-platform mobile applications (iOS and Android).</>,
         <>Implemented complex navigation and reactive state management.</>
@@ -220,6 +241,27 @@ const certificatesData = {
       credentialUrl: "https://coursera.org/verify/GOIG2WD5IMDA",
       images: [
         { title: "Certificate", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
+      ]
+    },
+    {
+      id: "C6",
+      company: "University of Glasgow",
+      role: "Generative AI for Project Managers",
+      period: "Feb 2025",
+      description: (
+        <>
+          Learned the integration of generative AI into project management via the University of Glasgow program on Coursera, covering <strong>workflow automation, structured prompt engineering, risk mitigation, and AI ethics</strong>.
+        </>
+      ),
+      tags: ["Generative AI", "Project Management", "Prompt Engineering", "Coursera"],
+      tasks: [
+        <>Leveraged generative AI to draft work schedules (WBS), workshop planning, and proactive project risk identification.</>,
+        <>Applied structured prompt engineering frameworks utilizing persona, task, constraint, and format guidelines.</>,
+        <>Maintained ethical governance, sensitive corporate data privacy, and output validation to prevent AI hallucinations.</>
+      ],
+      credentialUrl: "https://coursera.org/verify/DG7D0TDW9YLL",
+      images: [
+        { title: "Certificate", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop", alt: "Certificate" }
       ]
     }
   ]
